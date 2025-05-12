@@ -1,4 +1,4 @@
-name: Deploy ststic site to Github Pages
+ name: Deploy ststic site to Github Pages
 
 on:
   push:

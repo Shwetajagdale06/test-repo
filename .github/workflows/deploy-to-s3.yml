@@ -27,7 +27,11 @@ jobs:
             sudo ./aws/install
           else
             echo "AWS CLI is already installed, updating..."
-            sudo /usr/local/aws-cli/v2/current/bin/aws --update
+            sudo /usr/local/aws-cli/v2/current/bin/aws --version
+            # Reinstall AWS CLI v2 with --update flag
+            curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+            unzip awscliv2.zip
+            sudo ./aws/install --update
           fi
 
       - name: Configure AWS CLI

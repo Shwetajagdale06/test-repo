@@ -30,4 +30,4 @@ jobs:
         
       - name: Sync files to S3
         run: |
-          aws s3 sync . s3://my-unique-bucket-195275640451-ap-south-1 --delete --no-acl
+          aws s3 sync . s3://$my-unique-bucket-195275640451-ap-south-1 --delete --no-acl
